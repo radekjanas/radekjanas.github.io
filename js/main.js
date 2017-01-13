@@ -697,7 +697,7 @@ function setSliderIndicatorsPos() {
 /*------------------------------------------------------------------------------------------------------------*/
 /*--- Wstrzymanie przewijania slajdów w portfolio do czasu aż skończy się animacja po najechaniu na slajd ----*/
 /*------------------------------------------------------------------------------------------------------------*/
-function letClick() {
+/*function letClick() {
     
     $('.carousel-control').click(function () {
         var backgroundSizeStatus = $('.carousel-inner .active').css('background-size');
@@ -713,7 +713,7 @@ function letClick() {
         }
     });
     
-}
+}*/
 
 
 /*------------------------------------------------------------------------------------------------------------*/
