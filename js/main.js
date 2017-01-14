@@ -723,28 +723,49 @@ function showTitle() {
 /*---------------- Powiększanie ikon social media w kontakcie po najechaniu na nie myszą ---------------------*/
 /*------------------------------------------------------------------------------------------------------------*/
 function zoomIcon() {
-    
-    $('.social-media').hover(function () {
+
+    // Warunek dotyczący szerokości viewportu
+    var windowWidth = $(window).width();
+    if (windowWidth > 991) {
         
-        if ($(this).attr('id') == 'linkedin') {
-            
-            $('#linkedin').addClass('majority');
-            $('#goldenline').addClass('minority');
-            
-        } else {
-            
-            $('#goldenline').addClass('majority');
-            $('#linkedin').addClass('minority');
-            
-        }
+        // Dla desktopów uaktywniamy transition po najechaniu kursorem na daną ikonę serwisu społecznościowego
+        $('.social-media').hover(function () {
+
+            if ($(this).attr('id') == 'linkedin') {
+
+                $('#linkedin').addClass('majority');
+                $('#goldenline').addClass('minority');
+
+            } else {
+
+                $('#goldenline').addClass('majority');
+                $('#linkedin').addClass('minority');
+
+            }
+
+        }, function () {
+
+            $('.social-media').removeClass('majority minority');
+
+        });
         
-    }, function () {
+    } else {
         
         $('.social-media').removeClass('majority minority');
         
-    });
-    
+    }
+
 }
+
+// Throttling dla funkcji
+(function ($) {
+    var resizeTimer;
+
+    $(window).resize(function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(zoomIcon, 250);
+    });
+}(jQuery));
 
 
 /*------------------------------------------------------------------------------------------------------------*/
