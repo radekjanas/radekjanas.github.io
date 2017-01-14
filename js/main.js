@@ -15,7 +15,6 @@ $(document).ready(function () {
     clickedSkill();
     clickedProject();
     setSliderIndicatorsPos();
-    letClick();
     showTitle();
     zoomIcon();
     smoothScroll();
