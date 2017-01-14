@@ -1003,7 +1003,8 @@ footer .line-box .circle {
 
 @media all and (max-width: 767px) {
   body {
-    font-size: 24px; }
+    font-size: 24px;
+    background-position: 10% center; }
   .box-content {
     background-color: #ffffff !important;
     border: 1px solid #fff; }
