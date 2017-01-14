@@ -695,28 +695,6 @@ function setSliderIndicatorsPos() {
 
 
 /*------------------------------------------------------------------------------------------------------------*/
-/*--- Wstrzymanie przewijania slajdów w portfolio do czasu aż skończy się animacja po najechaniu na slajd ----*/
-/*------------------------------------------------------------------------------------------------------------*/
-function letClick() {
-    
-    $('.carousel-control').click(function () {
-        var backgroundSizeStatus = $('.carousel-inner .active').css('background-size');
-
-        if (backgroundSizeStatus !== '100% auto') {
-            
-            $('.carousel-control').removeAttr('href');
-            
-        } else {
-            
-            $('.carousel-control').attr('href', '#portfolio-carousel');
-            
-        }
-    });
-    
-}
-
-
-/*------------------------------------------------------------------------------------------------------------*/
 /*---------------------- Slider z portfolio - powiększanie tytułu slajdu na hoverze --------------------------*/
 /*------------------------------------------------------------------------------------------------------------*/
 function showTitle() {
