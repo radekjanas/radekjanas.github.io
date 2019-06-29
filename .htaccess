@@ -1,9 +1,0 @@
-# Wykorzystanie pamieci podrecznej przegladarki
-<IfModule mod_headers.c>
-<FilesMatch "\.(jpg|jpeg|png|gif|swf|JPG)$">
-Header set Cache-Control "max-age=2592000, public"
-</FilesMatch>
-<FilesMatch "\.(css|js)$">
-Header set Cache-Control "max-age=2592000, private"
-</FilesMatch>
-</IfModule>
